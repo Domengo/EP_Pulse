@@ -1,6 +1,6 @@
 from flask import session
 from flask import Flask
-from flask import url_for, request, redirect
+from flask import url_for, request, redirect, render_template
 
 app = Flask(__name__)
 
@@ -21,19 +21,14 @@ def login():
     if request.method == 'POST':
         session['username'] = request.form['username']
         return redirect(url_for('index'))
-    return '''
-        <form method="post">
-            <p><input type=text name=username>
-            <p><input type=submit value=Login>
-        </form>
-    '''
+    return render_template('login.html')
 
 
 @app.route('/logout')
 def logout():
     # remove the username from the session if it's there
     session.pop('username', None)
-    return redirect(url_for('index'))
+    return render_template('login.html')
 
 
 if __name__ == "__main__":
