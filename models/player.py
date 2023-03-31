@@ -1,3 +1,5 @@
+# It creates a class called Player that inherits from Base. It also creates a table called players
+# with the columns id, name, age, team_id, and team.
 from sqlalchemy import Column, Integer, String, ForeignKey
 from sqlalchemy.orm import relationship
 from models.base_model import Base

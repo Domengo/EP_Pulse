@@ -1,6 +1,6 @@
 from sqlalchemy import Column, Integer, String, ForeignKey
 from sqlalchemy.orm import relationship
-from base_model import Base
+from models.base_model import Base
 
 
 class Coach(Base):

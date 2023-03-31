@@ -83,7 +83,8 @@ class TestDataStorage(unittest.TestCase):
 
     def test_get_team(self):
         """
-        It creates a team, then retrieves it and asserts that the retrieved team has the same name and city
+        It creates a team, then retrieves it and asserts
+        that the retrieved team has the same name and city
         as the team that was created.
         """
         team_data = {'name': 'Example Team', 'city': 'New York'}
